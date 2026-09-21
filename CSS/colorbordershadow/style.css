@@ -1,0 +1,17 @@
+body{
+    background-color: bisque;
+}
+.main
+{
+    color:blueviolet
+}
+#card
+{
+    background-color:beige;
+ 
+ width: 500px;
+ height: auto;
+}
+.p{
+    border: 1px solid red;
+}
