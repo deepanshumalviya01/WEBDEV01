@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#outer{
+    border: 1px solid black;
+    display: flex;
+    /* gap: 50px */
+    justify-content:space-evenly;
+    height: 400px;
+    align-items:center;
+}
+
+.d
+{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: red;
+}

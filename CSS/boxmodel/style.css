@@ -1,0 +1,27 @@
+/* margin - top right bottome left */
+/* padding - top right bottome left */
+/* display -  none
+            block - width height can be control
+            inline
+            inline block
+            flex
+            grid*/
+
+
+
+#a{
+    width: 500px;
+    border: 1px solid black;
+    padding-left: 10px;
+    display: inline-block;
+}
+#h{
+    width: 50%;
+    border: 1px solid black;
+    padding-left: 0px;
+    display: inline-block;
+   
+}
+span{
+    height: 1px;
+}
