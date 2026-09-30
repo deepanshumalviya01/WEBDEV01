@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+#header{
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    position:sticky;
+    top: 1px;
+}
+
+#menu-item
+{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+#menu-item button{
+    padding: 5px 10px;
+    background-color: blanchedalmond;
+    border: 1px solid darkgreen;
+    color: red;
+    border-radius: 5px;
+
+}
+
+#ask-me
+{
+     padding: 5px 10px;
+    background-color: blanchedalmond;
+    border: 1px solid darkgreen;
+    color: red;
+    border-radius: 5px;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
