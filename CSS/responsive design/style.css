@@ -1,0 +1,27 @@
+#badabox
+{
+    display: flex;
+    justify-content: space-around;
+}
+.box{
+    border: 1px solid black;
+    height: 300px;
+    width: 250px;
+    display: flex;
+
+}
+
+#para1
+{
+display: grid;
+grid-template-columns: auto auto;
+background-color: red;
+width: 10%;
+
+}
+
+#para1 p{
+    display:flex;
+    padding-left:300px ;
+    background-color: red;
+}
