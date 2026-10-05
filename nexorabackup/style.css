@@ -39,7 +39,9 @@
     display: flex;
     width: 100vw;
     background-color: #f1f1ff;
-   position: fixed;
+   position:fixed;
+   z-index: 999;
+   
  
     
 
@@ -80,7 +82,14 @@
     background-color: #f1f1ff;
     height: 100VH;
     width: 99VW;
-   
+   display: flex;
+    flex-wrap: wrap; 
+    /* justify-content: space-around; */
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 20px 40px;
+    box-sizing: border-box;
     
 }
 
@@ -259,11 +268,7 @@ margin-left: 120PX;
     color: gray;
 }
 
-.part3_3
-{
-    height: 1px;
-    width: 2px;
-}
+
 
 
 
@@ -281,7 +286,8 @@ margin-left: 120PX;
 }
 .line1{
      border: 1px solid black;
-     background-color: aliceblue;
+     background-color: #eef2ff;
+     color: #155eef;
      position: relative;
      left: 370px;
      width: 50px;
@@ -292,8 +298,8 @@ margin-left: 120PX;
      height: 20px;
 }
 .line2{
-     border: 1px solid black;
-     background-color:antiquewhite;
+     
+     background-color:#eef2ff;
      margin-top: 20px;
      border-radius: 10px;
      position: relative;
@@ -302,8 +308,8 @@ margin-left: 120PX;
      height: 12px;
 }
 .line3{
-     border: 1px solid black;
-     background-color:aqua;
+     
+     background-color:#eef2ff;
      margin-top: 20px;
      border-radius: 10px;
      position: relative;
@@ -312,8 +318,8 @@ margin-left: 120PX;
      height: 12px;
 }
 .line4{
-     border: 1px solid black;
-     background-color:aquamarine;
+     
+     background-color:#ffffff;
      display: flex;
      margin-top: 30px;
      justify-content: space-evenly;
@@ -321,22 +327,24 @@ margin-left: 120PX;
 }
 
 .line4_1{
-     border: 1px solid black;
+     border-radius: 15px;
+     background-color:#eef2ff ;
      height: 120px;
      width: 200px;
      
 }
 .line4_2{
-     border: 1px solid black;
+     border-radius: 15px;
+     background-color: #f4f0ff;
      height: 120px;
      width: 200px;
     
 
 }
 .line5{
-     border: 1px solid black;
-     background-color:azure;
-     margin-top: 30px;
+   
+     background-color:#eef2ff ;
+     margin-top: 7px;
      height: 70px;
      width: 410px;
      position: relative;
@@ -346,18 +354,34 @@ margin-left: 120PX;
 
 .box2{
     border: 1px solid black;
-     background-color:bisque;
+     background-color:rgb(255, 255, 255);
      position: absolute;
+     right: -60px;
      
+     width: 190px;
+     height: 79px;
+     box-shadow:5px 5px 20px gray;
+     border-radius: 15px;
+padding: 4px;
+     top: 360px;
+}
+
+#box2_1{
+    width: 144px;
+    height: 70px;
 }
 .box1{
-     border: 1px solid black;
+     
      position: relative;
      bottom: 30px;
      width: 200px;
     border-radius:16px ;
-    background-color: ;
-     height: 60px;
+    background-color:#ffffff ;
+     height: 50px;
+     display: flex;
+     padding: 5px;
+     right: 50px;
+     box-shadow:5px 5px 20px gray;
      
 }
 
@@ -372,4 +396,82 @@ margin-left: 120PX;
     opacity: 100px;
     z-index: -1;
 
+}
+#tick{
+   align-items: center;
+   width: 50px;
+   height: 50px;
+}
+
+#line4_1_3{
+width: 50px;
+height: 50px;
+}
+
+#line4_1_1{
+    font-weight: bolder;
+    margin-left: 10px;
+}
+#line4_1_2{
+    color: gray;
+    margin-left: 10px;
+}
+
+#line4_2_1{
+width: 50px;
+height: 50px;
+}
+
+#line4_2_2{
+    font-weight: bolder;
+    margin-left: 10px;
+}
+#line4_2_3{
+     color: gray;
+    margin-left: 10px;
+}
+
+#arrow2{
+    width: 20px;
+    height: 20px;
+}
+.part3_3
+{
+   display: inline;
+  align-items: flex-end;
+  
+}
+
+.part3_3 a{
+    text-decoration: none;  /* Underline hatane ke liye */
+    color: #155eef;        /* Blue color ke liye */
+    font-family: sans-serif;
+    font-weight: 600;
+    display: inline-flex;  /* Text aur arrow icon ek line mein align karne ke liye */
+    align-items: center;
+    gap: 8px;
+}
+
+.part4_box{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.box{
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.part4_1{
+    color: gray;
+    font-size: large;
+}
+
+.part4_1
+{
+    font-size: medium;
+    margin-top: 5px;
 }
