@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Information Technology | RGPV Bhopal</title>
+    
+    <!-- Google Fonts & Font Awesome 6 Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-navy: #0b1a30;
+            --header-bg: #0d1e38;
+            --blue-accent: #1d4ed8;
+            --blue-glow: #2563eb;
+            --blue-soft: #eff6ff;
+            --badge-pill: #dbeafe;
+            --teal-accent: #0284c7;
+            --orange-alert: #f97316;
+            --bg-page: #f8fafc;
+            --surface-white: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border-light: #e2e8f0;
+            --card-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.06), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+            --card-hover-shadow: 0 20px 30px -8px rgba(37, 99, 235, 0.12), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ================= 1. TOP ANNOUNCEMENT BAR ================= */
+        .top-notice-bar {
+            background: linear-gradient(90deg, #071324 0%, #0d2242 100%);
+            color: #94a3b8;
+            padding: 8px 5%;
+            font-size: 0.825rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .notice-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge-live {
+            background: #ef4444;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .top-notice-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 18px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .top-notice-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* ================= 2. MAIN NAVBAR ================= */
+        header.site-header {
+            background: var(--surface-white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .navbar-wrap {
+            max-width: 1400px;
+            margin: auto;
+            padding: 12px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .crest-shield {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.4rem;
+            box-shadow: 0 6px 14px rgba(37, 99, 235, 0.28);
+        }
+
+        .brand-titles h1 {
+            font-size: 1.28rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .brand-titles p {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 6px 4px;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .nav-item a:hover,
+        .nav-item a.active {
+            color: var(--blue-glow);
+        }
+
+        .nav-item a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--blue-glow);
+            border-radius: 4px;
+        }
+
+        .btn-portal-head {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white !important;
+            padding: 9px 20px !important;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-portal-head:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+        }
+
+        /* ================= 3. HERO BANNER (Figma Home Page) ================= */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, rgba(7, 19, 36, 0.94) 0%, rgba(15, 30, 60, 0.90) 100%), 
+                        url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: #fff;
+            padding: 85px 5% 90px;
+            text-align: center;
+        }
+
+        .hero-inner {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 22px;
+            color: #93c5fd;
+        }
+
+        .hero-inner h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.18;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-inner p {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            margin-bottom: 34px;
+            font-weight: 400;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-blue {
+            background: #2563eb;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+            transition: var(--transition);
+        }
+
+        .btn-cta-blue:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-cta-outline {
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(6px);
+            transition: var(--transition);
+        }
+
+        .btn-cta-outline:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        /* ================= 4. METRICS / STATS STRIP ================= */
+        .stats-wrap {
+            max-width: 1240px;
+            margin: -40px auto 40px;
+            padding: 0 5%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-card-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat-box {
+            background: var(--surface-white);
+            padding: 24px 20px;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .stat-box:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .stat-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--blue-glow);
+            margin-bottom: 2px;
+        }
+
+        .stat-label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        /* ================= 5. ACADEMIC PROGRAMS SECTION (academic page.pdf Exact Content) ================= */
+        .section-container {
+            max-width: 1340px;
+            margin: auto;
+            padding: 50px 5%;
+        }
+
+        .section-title-wrap {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 36px;
+        }
+
+        .section-title-wrap h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            letter-spacing: -0.5px;
+        }
+
+        .section-title-wrap p {
+            color: var(--text-muted);
+            font-size: 1.02rem;
+            margin-top: 8px;
+        }
+
+        /* Filter Tabs */
+        .filter-tab-bar {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1px solid var(--border-light);
+            padding: 8px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--blue-glow);
+            color: var(--blue-glow);
+        }
+
+        .filter-btn.active {
+            background: var(--blue-glow);
+            color: white;
+            border-color: var(--blue-glow);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        /* Cards Grid */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 28px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .program-card:hover {
+            transform: translateY(-6px);
+            border-color: #93c5fd;
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .card-header-badge {
+            display: inline-block;
+            background: var(--badge-pill);
+            color: var(--blue-glow);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            align-self: flex-start;
+        }
+
+        .program-card h4 {
+            font-size: 1.24rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.4;
+            margin-bottom: 12px;
+            min-height: 54px;
+        }
+
+        .program-duration {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #64748b;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .program-card p.description {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 22px;
+            line-height: 1.6;
+        }
+
+        .card-footer-info {
+            border-top: 1px solid var(--border-light);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .eligibility-tag {
+            font-size: 0.825rem;
+            color: #475569;
+            font-weight: 600;
+        }
+
+        .btn-view-details {
+            background: transparent;
+            color: var(--blue-glow);
+            border: none;
+            font-size: 0.88rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-view-details:hover {
+            gap: 9px;
+            color: #1e3a8a;
+        }
+
+        /* ================= 6. DISTINGUISHED FACULTY (Figma Section) ================= */
+        .faculty-wrapper {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 60px 5%;
+            margin-top: 20px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--card-shadow);
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .faculty-member-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            padding: 26px 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .faculty-member-card:hover {
+            transform: translateY(-4px);
+            background: #ffffff;
+            border-color: var(--blue-glow);
+            box-shadow: var(--card-shadow);
+        }
+
+        .faculty-photo {
+            width: 86px;
+            height: 86px;
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #1e3a8a;
+            border: 3px solid #bfdbfe;
+        }
+
+        .faculty-member-card h5 {
+            font-size: 1.12rem;
+            color: var(--primary-navy);
+            font-weight: 700;
+        }
+
+        .faculty-member-card .title {
+            font-size: 0.84rem;
+            color: var(--teal-accent);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .faculty-member-card .spec {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* ================= 7. RESEARCH HIGHLIGHTS & LABS ================= */
+        .research-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .research-box {
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            border-left: 5px solid var(--blue-glow);
+            border-top: 1px solid var(--border-light);
+            border-right: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+        }
+
+        .research-box:hover {
+            box-shadow: var(--card-shadow);
+            transform: translateX(4px);
+        }
+
+        .research-box h5 {
+            font-size: 1.15rem;
+            color: var(--primary-navy);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .research-box p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* ================= 8. FOOTER ================= */
+        footer.site-footer {
+            background: #091526;
+            color: #94a3b8;
+            padding: 70px 5% 25px;
+            margin-top: 70px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-cols {
+            max-width: 1340px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1.6fr;
+            gap: 40px;
+            padding-bottom: 45px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-col h5 {
+            color: #f8fafc;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-col h5::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 32px;
+            height: 2px;
+            background: var(--blue-glow);
+            border-radius: 2px;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .social-icons-strip {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icons-strip a {
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons-strip a:hover {
+            background: var(--blue-glow);
+            color: #ffffff;
+            border-color: var(--blue-glow);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-col ul li a:hover {
+            color: #38bdf8;
+            transform: translateX(4px);
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .contact-list i {
+            color: #38bdf8;
+            margin-top: 4px;
+        }
+
+        .footer-bottom {
+            max-width: 1340px;
+            margin: auto;
+            text-align: center;
+            padding-top: 25px;
+            font-size: 0.86rem;
+            color: #64748b;
+        }
+
+        /* ================= 9. MODAL POPUP (Details) ================= */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(5px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            max-width: 580px;
+            width: 90%;
+            padding: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            position: relative;
+            animation: modalSlide 0.3s ease;
+        }
+
+        @keyframes modalSlide {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #f1f5f9;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        /* ================= RESPONSIVE DESIGN ================= */
+        @media (max-width: 1024px) {
+            .footer-cols {
+                grid-template-columns: 1fr 1fr;
+            }
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-card-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .hero-inner h2 {
+                font-size: 2.2rem;
+            }
+            .stats-card-row {
+                grid-template-columns: 1fr;
+            }
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-cols {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Top Notice Header -->
+    <div class="top-notice-bar">
+        <div class="notice-left">
+            <span class="badge-live">Notice</span>
+            <span>Admissions Open: Applications for 2026-27 academic session are now active!</span>
+        </div>
+        <div class="top-notice-links">
+            <a href="#academics"><i class="fa-solid fa-graduation-cap"></i> Syllabus</a>
+            <a href="#research"><i class="fa-solid fa-flask"></i> R&D Labs</a>
+            <a href="#contact"><i class="fa-solid fa-phone"></i> +91 755 2678 844</a>
+        </div>
+    </div>
+
+    <!-- 2. Main Navigation Bar -->
+    <header class="site-header">
+        <div class="navbar-wrap">
+            <a href="#" class="brand-container">
+                <div class="crest-shield">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="brand-titles">
+                    <h1>School of Information Technology</h1>
+                    <p>Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal (M.P.)</p>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="active" onclick="switchNav(event, 'home')">Home</a></li>
+                <li class="nav-item"><a onclick="switchNav(event, 'academics')">Academics</a></li>
+                <li class="nav-item"><a onclick="switchNav(event, 'faculty')">Faculty</a></li>
+                <li class="nav-item"><a onclick="switchNav(event, 'research')">Research</a></li>
+                <li class="nav-item"><a onclick="switchNav(event, 'contact')">Contact</a></li>
+                <li class="nav-item">
+                    <a href="https://www.rgpv.ac.in" target="_blank" class="btn-portal-head">
+                        <i class="fa-solid fa-lock"></i> Student Portal
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 3. Hero Banner (Figma Home Page Screen) -->
+    <section class="hero-banner" id="home">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <i class="fa-solid fa-award"></i> Ranked Among Top IT Institutions • AICTE Approved
+            </div>
+            <h2>School of Information Technology</h2>
+            <p>Empowering the next generation of tech innovators with cutting-edge education, world-class research opportunities, and deep industry connections.</p>
+            <div class="hero-cta-group">
+                <a href="#academics" class="btn-cta-blue">Apply Now for 2026-27</a>
+                <a href="#academics" class="btn-cta-outline">Explore Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Key Metrics Strip (Figma Home Metrics) -->
+    <div class="stats-wrap">
+        <div class="stats-card-row">
+            <div class="stat-box">
+                <div class="stat-number">23+</div>
+                <div class="stat-label">Years of Academic Excellence</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Active Enrolled Students</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">95%+</div>
+                <div class="stat-label">Career & Placement Record</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">NAAC A++</div>
+                <div class="stat-label">Accredited State University</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Academic Programs Section (Exact cards from academic page.pdf) -->
+    <section class="section-container" id="academics">
+        <div class="section-title-wrap">
+            <h3>Academic Programs</h3>
+            <p>Discover our diverse range of programs designed to prepare you for success in the technology sector.</p>
+        </div>
+
+        <!-- Filter Buttons from Figma -->
+        <div class="filter-tab-bar">
+            <button class="filter-btn active" onclick="filterPrograms('all', event)">All</button>
+            <button class="filter-btn" onclick="filterPrograms('undergraduate', event)">Bachelors</button>
+            <button class="filter-btn" onclick="filterPrograms('postgraduate', event)">Postgraduate</button>
+            <button class="filter-btn" onclick="filterPrograms('doctoral', event)">Doctoral</button>
+        </div>
+
+        <div class="programs-grid" id="programCards">
+            <!-- Card 1: AI & ML (From Figma) -->
+            <div class="program-card" data-category="undergraduate">
+                <div>
+                    <span class="card-header-badge">undergraduate</span>
+                    <h4>B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning)</h4>
+                    <div class="program-duration"><i class="fa-regular fa-clock"></i> 4 Years</div>
+                    <p class="description">Specialized program focusing on AI/ML technologies, deep learning, computer vision, and intelligent systems development.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span class="eligibility-tag">Eligibility: 10+2 with PCM</span>
+                    <button class="btn-view-details" onclick="openDetailsModal('B.Tech in CSE (AI & ML)', '4 Years', '10+2 with PCM (Valid JEE Mains Score)', '120 Seats', 'Deep Neural Networks, Natural Language Processing, Robotics, Computer Vision, High-Performance GPU Computing.')">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Card 2: CSBS (From Figma) -->
+            <div class="program-card" data-category="undergraduate">
+                <div>
+                    <span class="card-header-badge">undergraduate</span>
+                    <h4>B.Tech in Computer Science and Business Systems</h4>
+                    <div class="program-duration"><i class="fa-regular fa-clock"></i> 4 Years</div>
+                    <p class="description">Interdisciplinary program combining computer science with business systems, enterprise solutions, and management principles.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span class="eligibility-tag">Eligibility: 10+2 with PCM</span>
+                    <button class="btn-view-details" onclick="openDetailsModal('B.Tech in CSBS', '4 Years', '10+2 with PCM', '60 Seats', 'Enterprise Architecture, Financial Technology, Cloud Computing, Modern Management Systems, TCS-curated industry coursework.')">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Card 3: Data Science (From Figma) -->
+            <div class="program-card" data-category="undergraduate">
+                <div>
+                    <span class="card-header-badge">undergraduate</span>
+                    <h4>B.Tech in Computer Science and Engineering (Data Science)</h4>
+                    <div class="program-duration"><i class="fa-regular fa-clock"></i> 4 Years</div>
+                    <p class="description">Specialized program focusing on data analytics, big data technologies, statistical modeling, and data-driven decision making.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span class="eligibility-tag">Eligibility: 10+2 with PCM</span>
+                    <button class="btn-view-details" onclick="openDetailsModal('B.Tech in CSE (Data Science)', '4 Years', '10+2 with PCM', '60 Seats', 'Hadoop & Spark, Advanced Machine Learning, Business Analytics, Predictive Modeling, Data Visualization pipelines.')">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Card 4: M.Tech Program -->
+            <div class="program-card" data-category="postgraduate">
+                <div>
+                    <span class="card-header-badge">postgraduate</span>
+                    <h4>M.Tech in Information Technology & Cyber Security</h4>
+                    <div class="program-duration"><i class="fa-regular fa-clock"></i> 2 Years</div>
+                    <p class="description">Master-level focus on cryptography, penetration testing, distributed cloud networks, and software vulnerabilities defense.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span class="eligibility-tag">Eligibility: B.E./B.Tech + GATE</span>
+                    <button class="btn-view-details" onclick="openDetailsModal('M.Tech in IT & Cyber Security', '2 Years', 'B.Tech in CS/IT with GATE Score', '30 Seats', 'Digital Forensics, Cryptanalysis, Blockchain Architecture, Security Analytics, Threat Vectors.')">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Card 5: Ph.D. Program -->
+            <div class="program-card" data-category="doctoral">
+                <div>
+                    <span class="card-header-badge">doctoral</span>
+                    <h4>Ph.D. in Computer Science & Information Technology</h4>
+                    <div class="program-duration"><i class="fa-regular fa-clock"></i> 3 - 5 Years</div>
+                    <p class="description">Doctoral research program advancing frontiers in Quantum Computing, Edge AI, Federated Learning, and Sensor Mesh networks.</p>
+                </div>
+                <div class="card-footer-info">
+                    <span class="eligibility-tag">Eligibility: M.E./M.Tech + UGC-NET</span>
+                    <button class="btn-view-details" onclick="openDetailsModal('Ph.D. in Computer Science & IT', '3-5 Years', 'Post-Graduation in relevant discipline with valid test score', 'Based on faculty vacancies', 'Advanced Thesis, IEEE/Springer Publications, Grant writing, Lab assistance.')">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Distinguished Faculty Section (Figma Components) -->
+    <section class="section-container" id="faculty">
+        <div class="faculty-wrapper">
+            <div class="section-title-wrap">
+                <h3>Distinguished Faculty</h3>
+                <p>Meet the experts shaping the future of technology through mentorship and research.</p>
+            </div>
+            <div class="faculty-grid">
+                <div class="faculty-member-card">
+                    <div class="faculty-photo"><i class="fa-solid fa-user-tie"></i></div>
+                    <h5>Dr. Sanjeev Sharma</h5>
+                    <p class="title">Professor &amp; Head of Department</p>
+                    <p class="spec">Specialization: Machine Learning, Artificial Neural Networks &amp; Distributed Architectures</p>
+                </div>
+                <div class="faculty-member-card">
+                    <div class="faculty-photo"><i class="fa-solid fa-user-graduate"></i></div>
+                    <h5>Dr. Meenakshi Sahu</h5>
+                    <p class="title">Associate Professor</p>
+                    <p class="spec">Specialization: Natural Language Processing, Big Data Engineering &amp; Predictive Analytics</p>
+                </div>
+                <div class="faculty-member-card">
+                    <div class="faculty-photo"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h5>Prof. Anurag Shrivastava</h5>
+                    <p class="title">Assistant Professor</p>
+                    <p class="spec">Specialization: Cryptography, Cyber Security, Threat Modeling &amp; Ethical Hacking</p>
+                </div>
+                <div class="faculty-member-card">
+                    <div class="faculty-photo"><i class="fa-solid fa-user-gear"></i></div>
+                    <h5>Dr. Pooja Khandelwal</h5>
+                    <p class="title">Assistant Professor</p>
+                    <p class="spec">Specialization: IoT Protocols, Cloud-Edge Computing &amp; Smart Embedded Systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Research Highlights & Laboratories -->
+    <section class="section-container" id="research">
+        <div class="section-title-wrap">
+            <h3>Research Highlights &amp; Laboratories</h3>
+            <p>Discover our cutting-edge research initiatives that are shaping the future of technology.</p>
+        </div>
+        <div class="research-grid">
+            <div class="research-box">
+                <h5><i class="fa-solid fa-microchip" style="color:#2563eb; margin-right:8px;"></i> Centre for AI &amp; Cognitive Robotics</h5>
+                <p>High-end GPU-powered research workstations executing deep vision pipelines, autonomous models, and LLM fine-tuning supported by university innovation grants.</p>
+            </div>
+            <div class="research-box">
+                <h5><i class="fa-solid fa-shield-halved" style="color:#0284c7; margin-right:8px;"></i> Cyber Security &amp; Digital Forensics Lab</h5>
+                <p>A closed-circuit hardware network dedicated to live malware testing, penetration defense mechanisms, and secure packet inspection simulations.</p>
+            </div>
+            <div class="research-box">
+                <h5><i class="fa-solid fa-network-wired" style="color:#10b981; margin-right:8px;"></i> IoT &amp; Embedded Systems Workshop</h5>
+                <p>Equipped with wireless sensor transceivers, microcontrollers, and cloud-bridge gateways for smart agriculture and automated campus metering projects.</p>
+            </div>
+            <div class="research-box">
+                <h5><i class="fa-solid fa-database" style="color:#f59e0b; margin-right:8px;"></i> Big Data &amp; Cloud Sandbox</h5>
+                <p>Collaborative multi-node cluster providing students hands-on environment for distributed databases, streaming ETL frameworks, and Apache ecosystem tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer (Exact Address, Email, Phone from Figma) -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-cols">
+            <div class="footer-col">
+                <h5>SoIT, RGPV</h5>
+                <p>School of Information Technology is dedicated to empowering students with cutting-edge technology education and research opportunities since 2002.</p>
+                <div class="social-icons-strip">
+                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Academics</h5>
+                <ul>
+                    <li><a href="#academics">B.Tech (AI &amp; ML)</a></li>
+                    <li><a href="#academics">B.Tech (CSBS)</a></li>
+                    <li><a href="#academics">B.Tech (Data Science)</a></li>
+                    <li><a href="#academics">M.Tech Cyber Security</a></li>
+                    <li><a href="#academics">Ph.D. Research Track</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#home">About Institution</a></li>
+                    <li><a href="#faculty">Faculty Directory</a></li>
+                    <li><a href="#research">Research Centers</a></li>
+                    <li><a href="https://www.rgpv.ac.in" target="_blank">RGPV Main Portal</a></li>
+                    <li><a href="#academics">Training &amp; Placements</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contact Information</h5>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>School of Information Technology, RGPV Campus, Airport Road, Gandhi Nagar, Bhopal, Madhya Pradesh 462033</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>soit@rgpv.ac.in</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 755 2678 844</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 School of Information Technology, RGPV Bhopal. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Details Modal -->
+    <div class="modal-overlay" id="infoModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeDetailsModal()">&times;</button>
+            <h3 id="modalTitle" style="color:#0f172a; margin-bottom:12px; font-size:1.4rem;"></h3>
+            <p style="margin-bottom:8px;"><strong>Duration:</strong> <span id="modalDuration"></span></p>
+            <p style="margin-bottom:8px;"><strong>Eligibility:</strong> <span id="modalEligibility"></span></p>
+            <p style="margin-bottom:8px;"><strong>Approved Intake:</strong> <span id="modalIntake"></span></p>
+            <p style="margin-bottom:16px;"><strong>Core Subjects &amp; Focus:</strong> <span id="modalFocus"></span></p>
+            <div style="margin-top:24px; text-align:right;">
+                <button class="btn-cta-blue" style="border:none; cursor:pointer;" onclick="closeDetailsModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Filter tabs functionality
+        function filterPrograms(category, event) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.program-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Active Navigation switcher
+        function switchNav(event, sectionId) {
+            const navLinks = document.querySelectorAll('.nav-item a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Program Details Modal Logic
+        function openDetailsModal(title, duration, eligibility, intake, focus) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDuration').innerText = duration;
+            document.getElementById('modalEligibility').innerText = eligibility;
+            document.getElementById('modalIntake').innerText = intake;
+            document.getElementById('modalFocus').innerText = focus;
+            document.getElementById('infoModal').style.display = 'flex';
+        }
+
+        function closeDetailsModal() {
+            document.getElementById('infoModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('infoModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
